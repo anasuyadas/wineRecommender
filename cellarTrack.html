@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Security Screen</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            body
+            {
+                margin:0;
+                padding:0;
+            }
+            .modalDialog { 
+                position: fixed; 
+                font-family: Arial, Helvetica, sans-serif; top: 0; right: 0; bottom: 0; left: 0; background: rgb(223,223,223); z-index: 99999; -webkit-transition: opacity 400ms ease-in; -moz-transition: opacity 400ms ease-in; transition: opacity 400ms ease-in; display: block; }
+            .modalDialog:target { display: block; pointer-events: auto; } .modalDialog > div { width: 400px; position: relative; margin: 10% auto; padding: 5px 20px 13px 20px; border-radius: 20px; background: #fff; -moz-box-shadow: 0 0 3px 3px #888; -webkit-box-shadow: 0 0 3px 3px#888; box-shadow: 0 0 3px 3px #888; }
+            .button2{
+                -moz-border-radius:4px;
+                -webkit-border-radius:4px;
+                border-radius:4px;
+
+                -moz-box-shadow:2px 2px 0 #C6E5E7;
+                -webkit-box-shadow:2px 2px 0 #C6E5E7;
+                box-shadow:2px 2px 0 #C6E5E7;
+
+                background: -moz-linear-gradient(19% 75% 90deg, #CAEAFF, #e2f2ff);
+
+                background: -webkit-gradient(linear, left top, left bottom, from(#e2f2ff), to(#CAEAFF));
+
+                color:#637897;
+                font-family:arial,helvetica,sans-serif;
+                font-size:14px;
+                font-weight:bold;
+                padding:3px 4px;
+                text-shadow:1px 1px 0 rgba(255, 255, 255, 0.7);
+                text-transform:uppercase;
+                border: 1px solid #C6E5E7;
+            }
+            .button2:hover {
+                background-color: #e4f4ff;
+                background: -moz-linear-gradient(top, #e4f4ff 0%, #e4f4ff 100%);
+                background: -webkit-linear-gradient(top, #e4f4ff 0%, #e4f4ff 100%);
+                background: -o-linear-gradient(top, #e4f4ff 0%, #e4f4ff 100%);
+                background: -ms-linear-gradient(top, #e4f4ff 0% ,#e4f4ff 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbeaff', endColorstr='#cbeaff',GradientType=0 );
+                background: linear-gradient(top, #e4f4ff 0% ,#e4f4ff 100%);
+            }
+
+            .button2:active {
+                background-color: #8f2222;
+                background: -moz-linear-gradient(top, #afdbff 0%, #afdbff 100%);
+                background: -webkit-linear-gradient(top, #afdbff 0%, #afdbff 100%);
+                background: -o-linear-gradient(top, #afdbff 0%, #afdbff 100%);
+                background: -ms-linear-gradient(top, #afdbff 0% ,#afdbff 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afdbff', endColorstr='#afdbff',GradientType=0 );
+                background: linear-gradient(top, #afdbff 0% ,#afdbff 100%);
+            }
+            .center
+            {
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                vertical-align: center;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="modalDialog"> <div><h2>Security Screen</h2>        
+                <p>The system detected a bot like pattern.  Please fill the numbers below to confirm you are not a bot.</p> 
+                <div class="center">
+                    <img id="captchaImage" />
+                    <p>
+                        <input id="captchaInput" />
+                        <button id="submitObject" class="button2">Compare</button>
+                    </p></div> 
+                <p>
+                    <small>Incident Id: 54ba9489870cd</small>
+                    <script type="text/javascript">
+    this.SBM = {}; SBM.mode = "frmrld"; SBM.smbt = function () { if (SBM.mode=="frm") { SBM.captchaVld.value = VCO.smbt(); SBM.captchaInput.value = SBM.inputObj.value; var oSbmtFrm = document.getElementById("sbmtfrm"); oSbmtFrm.sbbSubmit(); } else { var captchaStr = SBM.inputObj.value; var exdate = new Date(); exdate.setDate(exdate.getDate() + 1); document.cookie = "cnfc=" + escape(captchaStr) + ";path=/; expires=" + exdate.toGMTString()+""; document.cookie = "pvstr=" + escape(VCO.smbt()) + ";path=/; expires=" + exdate.toGMTString()+""; window.location.reload(true); } }; SBM.init = function() { var imgObj = document.getElementById("captchaImage"); SBM.inputObj = document.getElementById("captchaInput"); var submitObj = document.getElementById("submitObject"); submitObj.onclick = function () { SBM.smbt(); }; imgObj.src = '/sbbi/?sbbpg=captcha'; imgObj.alt = "CAPTCHA"; SBM.inputObj.type = "text"; SBM.inputObj.autocomplete = "off"; SBM.inputObj.onkeypress = function (event) { VCO.sbfr(event); }; SBM.inputObj.onkeyup= function (event) { VCO.vke(event) }; var bodyObj = document.getElementsByTagName("body")[0]; SBM.captchaVld = document.createElement ("input"); SBM.captchaVld.type = "hidden"; SBM.captchaVld.name="pairvaluestr"; SBM.captchaInput = document.createElement ("input"); SBM.captchaInput.type = "hidden"; if (SBM.mode=="frm") { var submitFrm = document.createElement ("form"); bodyObj.appendChild(submitFrm); submitFrm.id = "sbmtfrm"; submitFrm.method = "post"; submitFrm.action=""; submitFrm.sbbSubmit = submitFrm.submit; submitFrm.appendChild(SBM.captchaInput); submitFrm.appendChild(SBM.captchaVld);  } else { bodyObj.appendChild(SBM.captchaVld); bodyObj.appendChild(SBM.captchaInput); } SBM.captchaInput.id = "pdxwargfkn"; SBM.captchaInput.name = "captchastring"; }; SBM.init();
+    this.VCO = {}; VCO.at=Math.round((new Date()).getTime() / 1000); VCO.oFld = SBM.captchaInput; VCO.oVFld = SBM.inputObj; VCO.bt=VCO.at; VCO.dc=""; VCO.ccdv = function (kc) { var kcArr = [[48,10],[17,26],[32,26]]; var x=0; for (var i=0; i<kcArr.length; i++) { x=x+kcArr[i][0]; if (kc>=x) { if (kc<x+kcArr[i][1]) return 1; } else break; } return 0; }; VCO.cmp = function (kc) { var ochar = VCO.oVFld.value.substr(VCO.oVFld.value.length-1,1); if (ochar.toUpperCase().charCodeAt(0)==kc) return 1; else { return 0; } }; VCO.vke = function (e) { var kc; var d; if (window.event) kc = window.event.keyCode; else if (e) kc = e.which; else return; if (kc == 13) SBM.smbt(); else if (VCO.ccdv(kc)) { var ct = Math.round((new Date()).getTime() / 1000); var tt = (ct - VCO.bt); var dk=VCO.oFld.id; VCO.dc = VCO.dc + (VCO.cmp(kc)?dk.charAt(tt>(dk.length-2)?dk.length-2:tt):dk.charAt(dk.length-1)); VCO.bt=ct; } }; VCO.sbfr = function (e) { var kc; if (window.event) kc = window.event.keyCode; else if (e) kc = e.which; else return; if (kc == 13) SBM.smbt(); return true; }; VCO.ac = function () { var cst=""; var gc; var gs=""; for (l=97; l<122; l++) { cst += String.fromCharCode(l); } var l=0; while (l<VCO.oVFld.value.length) { gc = cst.charAt(Math.floor(Math.random()*25)); if (VCO.oFld.id.indexOf(gc)==-1) { l++; gs+=gc; } } return gs; }; VCO.csv = function() { if (VCO.dc=="") return true; var i; var dk=VCO.oFld.id; var dkl = dk.length-1; for (i=0; i<VCO.dc.length; i++) { if (dk.indexOf(VCO.dc.charAt(i))<dkl) return false; } return true; }; VCO.smbt = function() { VCO.at = Math.round((new Date()).getTime() / 1000)-VCO.at; return VCO.at+"/"+(VCO.csv()?VCO.ac():VCO.dc); }; 
+</script>
+
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
